@@ -834,7 +834,7 @@ GameObject:
   - component: {fileID: 822964200}
   - component: {fileID: 822964199}
   - component: {fileID: 822964198}
-  m_Layer: 5
+  m_Layer: 3
   m_Name: Wall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1199,7 +1199,7 @@ GameObject:
   - component: {fileID: 937616236}
   - component: {fileID: 937616238}
   - component: {fileID: 937616237}
-  m_Layer: 5
+  m_Layer: 3
   m_Name: Kg_text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2564,7 +2564,7 @@ GameObject:
   - component: {fileID: 1736104068}
   - component: {fileID: 1736104067}
   - component: {fileID: 1736104066}
-  m_Layer: 5
+  m_Layer: 3
   m_Name: Box2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3309,6 +3309,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ef51c081050a644db2f967cc9ebde6b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  collisionMask:
+    serializedVersion: 2
+    m_Bits: 8
   uiManager: {fileID: 1481087298}
 --- !u!1001 &6034229670262132540
 PrefabInstance:

@@ -35,7 +35,10 @@ public class UIManager : MonoBehaviour
     #endregion
 
     #region Public Methods
-
+    /// <summary>
+    /// Set's interaction of replay btn
+    /// </summary>
+    /// <param name="interact"></param>
     public void CanInteractReplayBtn(bool interact) 
     {
         replayButton.interactable = interact;

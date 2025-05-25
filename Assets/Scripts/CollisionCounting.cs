@@ -4,6 +4,7 @@ using UnityEngine;
 public class CollisionCounting : MonoBehaviour
 {
     #region Private Serialized Variables
+    [SerializeField] private LayerMask collisionMask;
     [SerializeField] UIManager uiManager;
     #endregion
 
@@ -24,9 +25,12 @@ public class CollisionCounting : MonoBehaviour
     /// <param name="collision"></param>
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        collisionAmount++;
-        uiManager.UpdateCollisionText(collisionAmount);
-        timeSinceLastCollision = Time.time;
+        if ((collisionMask & (1 << collision.gameObject.layer)) != 0)
+        {
+            collisionAmount++;
+            uiManager.UpdateCollisionText(collisionAmount);
+            timeSinceLastCollision = Time.time;
+        }
     }
     #endregion
 
